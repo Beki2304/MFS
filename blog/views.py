@@ -9,10 +9,10 @@ def lepsa_stran(request):
     return render(request, 'index.html', {})
 
 def domaca_stran(request):
-    return render(request, 'homepage.html', {})
+    return render(request, 'Domov.html', {})
 
-def blog_stran(request):
-    return render(request, 'blog.html', {})
+def O_strani(request):
+    return render(request, 'O strani.html', {})
 
 def galerija_stran(request):
     return render(request, 'galerija.html', {})
@@ -21,7 +21,7 @@ def onas_stran(request):
     return render(request, 'onas.html', {})
 
 def kontakti_stran(request):
-    return render(request, 'kontankti.html', {})
+    return render(request, 'kontakti.html', {})
 
 def vprasanje(request, id=1):
     vprasanje = Vprasanje.objects.get(pk=id)
