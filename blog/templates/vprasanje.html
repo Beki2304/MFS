@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block "vsebina" %}
+<div class="post">
+	<p class="date">{{ vprasanje.id }}</p>
+	<h2 class="title">
+{% autoescape on %} 
+		{{ vprasanje }}
+{% endautoescape %}</h2>
+	<div class="entry">
+		<ul>
+		{% for o in vprasanje.odgovori.all %}
+			<li><a class="odgovor" href="/kljuc/{{ o.naslednje_vprasanje.id }}/">{{ o.text }}</a>
+		{% endfor %}
+		</ul>
+	</div>
+</div>
+
+{% endblock %}
