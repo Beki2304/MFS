@@ -17,7 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-   url("^kljuc$", "blog.views.vprasanje"),
   url("^kljuc/(?P<id>[0-9]+)/$", "blog.views.vprasanje"),
    url("prva.html", "blog.views.prva_stran"),
    url("lepsa.html", "blog.views.lepsa_stran"),
@@ -27,6 +26,7 @@ urlpatterns = [
    url("onas.html", "blog.views.onas_stran"),
    url("kontakti.html", "blog.views.kontakti_stran"),
    url(r'^admin/', include(admin.site.urls)),
+   url("", "blog.views.vprasanje"),
 ]
 
 
